@@ -1,0 +1,8 @@
+site_name: NetMon Documentation
+nav:
+  - Home: index.md
+  - About: about.md
+  - User Guide:
+    - Devices & Cabling: Features\Devices & Cabling.md
+    - IP Address Management: Features\IPAM.md
+    - Feature3: Features\Feature3.md
