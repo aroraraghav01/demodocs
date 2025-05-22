@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Devices & Cabling - NetMon Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">NetMon Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">User Guide</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Devices & Cabling</a>
+</li>
+                                    
+<li>
+    <a href="../IPAM/" class="dropdown-item">IP Address Management</a>
+</li>
+                                    
+<li>
+    <a href="../Feature3/" class="dropdown-item">Feature3</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../about/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../IPAM/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#devices-cabling" class="nav-link">Devices &amp; Cabling</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#manufacturers" class="nav-link">Manufacturers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#device-types" class="nav-link">Device Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#devices" class="nav-link">Devices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#module-types-modules" class="nav-link">Module Types &amp; Modules</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cables" class="nav-link">Cables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="devices-cabling">Devices &amp; Cabling</h1>
+<p>At its heart, NetMon is a tool for modeling your network infrastructure, and the device object is pivotal to that function. A device can be any piece of physical hardware installed within your network, such as server, router, or switch, and may optionally be mounted within a rack. Within each device, resources such as network interfaces and console ports are modeled as discrete components, which may optionally be grouped into modules.</p>
+<p>NetMon uses device types to represent unique real-world device models. This allows a user to define a device type and all its components once, and easily replicate an unlimited number of device instances from it.</p>
+<h2 id="manufacturers">Manufacturers</h2>
+<p>A manufacturer generally represents an organization which produces hardware devices. These can be defined by users, however they should represent an actual entity rather than some abstract idea.</p>
+<h2 id="device-types">Device Types</h2>
+<p>A device type represents a unique combination of manufacturer and hardware model which maps to discrete make and model of device which exists in the real world. Each device type typically has a number of components created on it, representing network interfaces, device bays, and so on. New devices of this type can then be created in NetMon, and any associated components will be automatically replicated from the device type. This avoids needing to tediously recreate components for each device as it is added in NetMon.</p>
+<p>The Device Type Library</p>
+<p>While users are always free to create their own device types in NetMon, many find it convenient to draw from our <a href="https://github.com/NetMon-community/devicetype-library">community library</a> of pre-defined device types. This is possible because a particular make and model of device is applicable universally and never changes.</p>
+<p>All the following can be modeled as components:</p>
+<ul>
+<li>Interfaces</li>
+<li>Console ports</li>
+<li>Console server ports</li>
+<li>Power ports</li>
+<li>Power outlets</li>
+<li>Pass-through ports (front and rear)</li>
+<li>Module bays (which house modules)</li>
+<li>Device bays (which house child devices)</li>
+</ul>
+<p>For example, a Juniper EX4300-48T device type might have the following component templates defined:</p>
+<ul>
+<li>One template for a console port ("Console")</li>
+<li>Two templates for power ports ("PSU0" and "PSU1")</li>
+<li>48 templates for 1GE interfaces ("ge-0/0/0" through "ge-0/0/47")</li>
+<li>Four templates for 10GE interfaces ("xe-0/2/0" through "xe-0/2/3")</li>
+</ul>
+<p>Once component templates have been created, every new device that you create as an instance of this type will automatically be assigned each of the components listed above.</p>
+<p>Component Instantiation is not Retroactive</p>
+<p>The instantiation of components from a device type definition occurs only at the time of device creation. If you modify the components assigned to a device type, it will not affect devices which have already been created. This guards against any inadvertent changes to existing devices. However, you always have the option of adding, modifying, or deleting components on existing devices. (These changes can easily be applied to multiple devices at once using the bulk operations available in the UI.)</p>
+<h2 id="devices">Devices</h2>
+<p>Whereas a device type defines the make and model of a device, a device itself represents an actual piece of installed hardware somewhere in the real world. A device can be installed at a particular position within an equipment rack, or simply associated with a site (and optionally with a location within that site).</p>
+<p>Each device can have an operational status, functional role, and software platform assigned. Device components are instantiated automatically from the assigned device type upon creation.</p>
+<h3 id="virtual-chassis">Virtual Chassis</h3>
+<p>Sometimes it is necessary to model a set of physical devices as sharing a single management plane. Perhaps the most common example of such a scenario is stackable switches. These can be modeled as virtual chassis in NetMon, with one device acting as the chassis master and the rest as members. All components of member devices will appear on the master.</p>
+<h3 id="virtual-device-contexts">Virtual Device Contexts</h3>
+<p>A virtual device context (VDC) is a logical partition within a device. Each VDC operates autonomously but shares a common pool of resources. Each interface can be assigned to one or more VDCs on its device.</p>
+<h2 id="module-types-modules">Module Types &amp; Modules</h2>
+<p>Much like device types and devices, module types can instantiate discrete modules, which are hardware components installed within devices. Modules often have their own child components, which become available to the parent device. For example, when modeling a chassis-based switch with multiple line cards in NetMon, the chassis would be created (from a device type) as a device, and each of its line cards would be instantiated from a module type as a module installed in one of the device's module bays.</p>
+<p>Device Bays vs. Module Bays</p>
+<p>What's the difference between device bays and module bays? Device bays are appropriate when the installed hardware has its own management plane, isolated from the parent device. A common example is a blade server chassis in which the blades share power but operate independently. In contrast, a module bay holds a module which does <em>not</em> operate independently of its parent device, as with the chassis switch line card example mentioned above.</p>
+<p>One especially nice feature of modules is that templated components can be automatically renamed according to the module bay into which the parent module is installed. For example, if we create a module type with interfaces named <code>Gi{module}/0/1-48</code> and install a module of this type into module bay 7 of a device, NetMon will create interfaces named <code>Gi7/0/1-48</code>.</p>
+<h2 id="cables">Cables</h2>
+<p>NetMon models cables as connections among certain types of device components and other objects. Each cable can be assigned a type, color, length, and label. NetMon will enforce basic sanity checks to prevent invalid connections. (For example, a network interface cannot be connected to a power outlet.)</p>
+<p>Either end of a cable may terminate to multiple objects of the same type. For example, a network interface can be connected via a fiber optic cable to two discrete ports on a patch panel (each port attaching to an individual fiber strand in the patch cable).</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
