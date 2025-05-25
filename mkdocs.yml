@@ -2,8 +2,59 @@ site_name: NetMon Documentation
 nav:
   - Home: index.md
   - About: about.md
-  - User Guide:
-    - Devices & Cabling: Features\Devices & Cabling.md
-    - IP Address Management: Features\IPAM.md
-    - Feature3: Features\Feature3.md
-theme: material
+  - Features:
+    - Features/index.md
+    - Devices & Cabling: Features/Devices & Cabling.md
+    - IP Address Management: Features/IPAM.md
+    - Feature3: Features/Feature3.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+theme:
+  name: material
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+      primary: teal
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+      primary: blue
+      accent: deep orange
+  custom_dir: docs/overrides
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navgation.sections
+    - navigation.tracking
+copyright: Copyright &copy; 2025 GB Tech Global
+plugins:
+   - search
+   - awesome-pages
+   - section-index
+   - with-pdf:
+      author: "Raghav Arora"
+      copyright: "GB Tech Global"
+      cover: true
+      back_cover: false
+      cover_title: "NetMon"
+      cover_subtitle: "NetMon User Guide"
+      toc_title: "Table of Contents"
+      heading_shift: true
+      toc_level: 3
+      ordered_chapter_level: 2
+      output_path: "C:/Users/Raghav/my-project/docs/assets/NetMon_UserGuide.pdf"
+   - print-site:
+      path_to_pdf: "assets/NetMon_UserGuide.pdf"
