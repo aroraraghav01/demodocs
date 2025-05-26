@@ -44,4 +44,5 @@ plugins:
    - search
    - awesome-pages
    - section-index
-   - print-site
+   - print-site:
+      path_to_pdf: "assets/NetMon_UserGuide.pdf"
