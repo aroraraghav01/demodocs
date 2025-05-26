@@ -44,17 +44,4 @@ plugins:
    - search
    - awesome-pages
    - section-index
-   - with-pdf:
-      author: "Raghav Arora"
-      copyright: "GB Tech Global"
-      cover: true
-      back_cover: false
-      cover_title: "NetMon"
-      cover_subtitle: "NetMon User Guide"
-      toc_title: "Table of Contents"
-      heading_shift: true
-      toc_level: 3
-      ordered_chapter_level: 2
-      output_path: "C:/Users/Raghav/my-project/docs/assets/NetMon_UserGuide.pdf"
-   - print-site:
-      path_to_pdf: "assets/NetMon_UserGuide.pdf"
+   - print-site
